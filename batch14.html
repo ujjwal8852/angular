@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>AngularJS Array Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div ng-controller="MyController">
+        <h2>List of Items</h2>
+        <ul>
+            <li ng-repeat="item in items">
+                <strong>Name:</strong> {{ item.name }}, <strong>Price:</strong> ${{ item.price }}
+            </li>
+        </ul>
+
+        <h3>Add New Item</h3>
+        <div>
+            <label for="newName">Name:</label>
+            <input type="text" id="newName" ng-model="newItem.name"><br><br>
+
+            <label for="newPrice">Price:</label>
+            <input type="number" id="newPrice" ng-model="newItem.price"><br><br>
+
+            <button ng-click="addItem()">Add Item</button>
+        </div>
+    </div>
+
+</body>
+</html>
